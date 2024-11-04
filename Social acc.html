@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .social-media {
+    text-align: center;
+    margin: 40px 0; /* Space above and below */
+}
+
+.social-media h2 {
+    color: black; /* Gold color for the heading */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-weight: bold; /* Bold text */
+}
+
+.social-icon:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+.facebook {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.twitter {
+    background-color: #1da1f2; /* Twitter color */
+}
+
+.instagram {
+    background-color: #c32aa3; /* Instagram color */
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .social-icons {
+        flex-direction: column; /* Stack icons vertically on smaller screens */
+        gap: 10px; /* Less space between stacked icons */
+    }
+}
+
+*{
+    background-color: #8BA889;
+}
+
+</style>
+</head>
+<body>
+<a href="index.html">Get Home</a>
+    <div class="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Byron.pinakamalupet" target="_blank" class="social-icon facebook">Facebook</a>
+            <a href="https://x.com/jaaaaaby3" target="_blank" class="social-icon twitter">Twitter</a>
+            <a href="https://www.instagram.com/jamesgeloca/" target="_blank" class="social-icon instagram">Instagram</a>
+        </div>
+    </div>    
+</body>
+</html>
