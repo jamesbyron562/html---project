@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Me</title>
+    <style>
+        /* Background animation for the page */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #f7b731, #48c9b0, #8e44ad);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Keyframes for the animated background */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for navbar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure navbar stays on top */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+        }
+
+        /* Main social media section */
+        .social-media {
+            text-align: center;
+            color: white;
+            z-index: 1; /* Ensure the content stays above the animated background */
+            margin-top: 80px; /* Space for the fixed navbar */
+        }
+
+        /* Heading for the social section */
+        .social-media h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out; /* Smooth fade-in effect */
+        }
+
+        /* Flexbox for social media icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Individual social media icon style */
+        .social-icon {
+            display: inline-block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover effects for social icons */
+        .social-icon:hover {
+            transform: scale(1.1); /* Slightly enlarge the icon */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Add glow effect */
+            opacity: 0.9; /* Slight transparency */
+        }
+
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Specific background colors for each icon */
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .instagram {
+            background-color: #c32aa3;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column; /* Stack navbar items vertically */
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            /* Social icons stack on mobile */
+            .social-icons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Link Styling (for the "Get Home" link) */
+        a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: translateY(-5px); /* Lift the button up on hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+        }
+
+        /* Smooth fade-in effect for social media icons */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Social Media Section -->
+    <div class="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Byron.pinakamalupet" target="_blank" class="social-icon facebook">F</a>
+            <a href="https://x.com/jaaaaaby3" target="_blank" class="social-icon twitter">T</a>
+            <a href="https://www.instagram.com/jamesgeloca/" target="_blank" class="social-icon instagram">I</a>
+        </div>
+    </div>    
+</body>
+</html>
